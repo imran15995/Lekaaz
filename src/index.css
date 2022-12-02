@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	body {
+		@apply bg-bodyBg text-white font-title;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+	.container {
+		@apply w-full px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1252px] mx-auto;
+	}
+	h1 {
+		@apply text-md md:text-xl lg:text-2xl;
+	}
+	.btn {
+		@apply py-[10px] px-[15px] sm:text-normal bg-primary rounded-full text-bodyBg font-normal hover:text-primary hover:bg-transparent border border-primary text-center sm:font-normal duration-300 whitespace-nowrap;
+	}
+	.btn-outline {
+		@apply py-[10px] px-[15px] border border-primary text-primary sm:text-normal hover:bg-primary rounded-full hover:text-bodyBg font-normal text-center sm:font-normal duration-300;
+	}
+	.btn-sm {
+		@apply text-[18px] leading-[18px] pt-[5px] pb-[3px] duration-300;
+	}
+	ul {
+		@apply p-0 m-0;
+	}
+	a {
+		@apply hover:text-primary duration-300;
+	}
+	.authenticated-menu .active {
+		@apply bg-primary  text-[18px] font-normal mb-[6px] text-white duration-100;
+	}
+	.profile-menu .active {
+		@apply bg-primary  text-[18px] font-normal mb-4 text-bodyBg duration-100 px-3 pt-[2px] ml-0;
+	}
+	.sidebar-menu .active {
+		@apply border-primary text-primary;
+	}
+}
+@media (width < 1024px) {
+	.max--v-hidden {
+		visibility: hidden;
+	}
+}
+@media (width < 375px) {
+	.logo {
+		width: 120px;
+	}
+	.logo img {
+		max-width: 100%;
+	}
+	.logo svg {
+		width: 100%;
+		height: unset;
+	}
+	.btn-sm {
+		font-size: 16px;
+	}
+	.auth-form {
+		max-width: 290px;
+	}
+}
+.v-hidden {
+	visibility: hidden;
+}
+.nav-menu:focus ~ .__nav-menu {
+	opacity: 1;
+	visibility: visible;
+}
+.file-type {
+	font-size: 14px !important;
+}
+.__file-type {
+	position: relative;
+}
+.__file-type input {
+	line-height: 20px;
+	margin-top: 4px;
+	padding-bottom: 3px;
+	padding-left: 1px;
+}
+.__file-type::before {
+	left: 0;
+	bottom: 3px;
+	height: 38px;
+	background: #031a2a;
+	content: "Choose File";
+	position: absolute;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	width: 85px;
+	height: 27px;
+	border: 1px solid #40494f;
+	border-bottom-color: #ffffff10;
+}
+
+.react-date-picker__wrapper {
+	border: none;
+}
+.react-date-picker {
+	border-bottom: 1px solid #40494f;
+	padding-left: 0;
+}
+.react-date-picker__inputGroup__input {
+	font-size: 18px;
+}
+@media (min-width: 576px) {
+	.react-date-picker__inputGroup__input {
+		font-size: 22px;
+	}
+}
+.react-date-picker__wrapper * {
+	outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+html {
+	-webkit-tap-highlight-color: transparent;
+}
